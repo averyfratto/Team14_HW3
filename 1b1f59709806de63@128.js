@@ -53,8 +53,13 @@ function _chart(d3,walmarts,legend,stateMesh)
       width: 260,
       tickFormat: d3.format(".1f") // optional: shows numbers with 1 decimal place
     }));
-  svg.selectAll("text")
-  .attr("fill", "black");
+  svg.append("style").text(`
+  text {
+    fill: black;
+    font-size: 12px;
+    font-family: sans-serif;
+  }
+`);
 
   // Append the state mesh.
   svg.append("path")
