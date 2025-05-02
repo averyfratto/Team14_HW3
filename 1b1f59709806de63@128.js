@@ -56,8 +56,6 @@ function _chart(d3,walmarts,legend,stateMesh)
   svg.append("style").text(`
   text {
     fill: black;
-    font-size: 12px;
-    font-family: sans-serif;
   }
 `);
 
