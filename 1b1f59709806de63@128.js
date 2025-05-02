@@ -48,11 +48,13 @@ function _chart(d3,walmarts,legend,stateMesh)
   svg.append("g")
     .attr("transform", "translate(580,20)")
     .append(() => legend({
-      color: black,
+      color,
       title: "Median distance to nearest PoW (m)", // or whatever unit you're using
       width: 260,
       tickFormat: d3.format(".1f") // optional: shows numbers with 1 decimal place
     }));
+  svg.selectAll("text")
+  .attr("fill", "black");
 
   // Append the state mesh.
   svg.append("path")
